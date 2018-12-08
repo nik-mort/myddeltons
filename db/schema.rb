@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20181208165215) do
 
   create_table "gun_lisences", force: :cascade do |t|
-    t.string "type"
+    t.string "classification"
     t.string "number"
     t.date "expiry_date"
     t.integer "member_id"

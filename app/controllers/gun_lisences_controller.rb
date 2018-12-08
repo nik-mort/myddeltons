@@ -69,6 +69,6 @@ class GunLisencesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gun_lisence_params
-      params.require(:gun_lisence).permit(:type, :number, :expiry_date, :member_id)
+      params.require(:gun_lisence).permit(:classification, :number, :expiry_date, :member_id)
     end
 end
