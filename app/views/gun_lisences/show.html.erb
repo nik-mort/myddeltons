@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @gun_lisence.type %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @gun_lisence.number %>
+</p>
+
+<p>
+  <strong>Expiry date:</strong>
+  <%= @gun_lisence.expiry_date %>
+</p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @gun_lisence.member %>
+</p>
+
+<%= link_to 'Edit', edit_gun_lisence_path(@gun_lisence) %> |
+<%= link_to 'Back', gun_lisences_path %>

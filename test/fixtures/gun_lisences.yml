@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  number: MyString
+  expiry_date: 2018-12-08
+  member: one
+
+two:
+  type: 
+  number: MyString
+  expiry_date: 2018-12-08
+  member: two

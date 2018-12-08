@@ -1,0 +1,37 @@
+<%= form_with(model: gun_lisence, local: true) do |form| %>
+  <% if gun_lisence.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gun_lisence.errors.count, "error") %> prohibited this gun_lisence from being saved:</h2>
+
+      <ul>
+      <% gun_lisence.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type, id: :gun_lisence_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number %>
+    <%= form.text_field :number, id: :gun_lisence_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expiry_date %>
+    <%= form.date_select :expiry_date, id: :gun_lisence_expiry_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :member_id %>
+    <%= form.text_field :member_id, id: :gun_lisence_member_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

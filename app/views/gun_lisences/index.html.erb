@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gun Lisences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Number</th>
+      <th>Expiry date</th>
+      <th>Member</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gun_lisences.each do |gun_lisence| %>
+      <tr>
+        <td><%= gun_lisence.type %></td>
+        <td><%= gun_lisence.number %></td>
+        <td><%= gun_lisence.expiry_date %></td>
+        <td><%= gun_lisence.member %></td>
+        <td><%= link_to 'Show', gun_lisence %></td>
+        <td><%= link_to 'Edit', edit_gun_lisence_path(gun_lisence) %></td>
+        <td><%= link_to 'Destroy', gun_lisence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gun Lisence', new_gun_lisence_path %>

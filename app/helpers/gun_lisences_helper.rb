@@ -1,0 +1,2 @@
+module GunLisencesHelper
+end
