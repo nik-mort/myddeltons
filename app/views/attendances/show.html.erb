@@ -7,7 +7,8 @@
 
 <p>
   <strong>Events:</strong>
-  <%= @attendance.events %>
+  <%= @attendance.event.name %>
+  <%= @attendance.event.start_date.year %>
 </p>
 
 <%= link_to 'Edit', edit_attendance_path(@attendance) %> |

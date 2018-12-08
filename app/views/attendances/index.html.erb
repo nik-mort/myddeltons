@@ -15,7 +15,7 @@
     <% @attendances.each do |attendance| %>
       <tr>
         <td><%= attendance.member %></td>
-        <td><%= attendance.events %></td>
+        <td><%= attendance.event.name %><%= attendance.event.start_date.year %></td>
         <td><%= link_to 'Show', attendance %></td>
         <td><%= link_to 'Edit', edit_attendance_path(attendance) %></td>
         <td><%= link_to 'Destroy', attendance, method: :delete, data: { confirm: 'Are you sure?' } %></td>

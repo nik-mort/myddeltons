@@ -14,10 +14,10 @@ ActiveRecord::Schema.define(version: 20181208175920) do
 
   create_table "attendances", force: :cascade do |t|
     t.integer "member_id"
-    t.integer "events_id"
+    t.integer "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["events_id"], name: "index_attendances_on_events_id"
+    t.index ["event_id"], name: "index_attendances_on_event_id"
     t.index ["member_id"], name: "index_attendances_on_member_id"
   end
 
