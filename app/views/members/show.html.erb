@@ -35,6 +35,14 @@
   <%= @member.medical_notes %>
 </p>
 
+<p>
+  <strong>Memberships</strong>
+</p>
+<ul>
+  <% @member.memberships.each do |membership| %>
+  <li><%= "#{membership.organisation.name} #{membership.year}" %></li>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Back', members_path %>

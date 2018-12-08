@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181208172017) do
+ActiveRecord::Schema.define(version: 20181208172456) do
 
   create_table "gun_lisences", force: :cascade do |t|
     t.string "classification"
@@ -32,6 +32,16 @@ ActiveRecord::Schema.define(version: 20181208172017) do
     t.datetime "updated_at", null: false
     t.text "medical_notes"
     t.boolean "combatant"
+  end
+
+  create_table "memberships", force: :cascade do |t|
+    t.integer "member_id"
+    t.integer "organisation_id"
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["member_id"], name: "index_memberships_on_member_id"
+    t.index ["organisation_id"], name: "index_memberships_on_organisation_id"
   end
 
   create_table "organisations", force: :cascade do |t|
