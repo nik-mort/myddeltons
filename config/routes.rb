@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   resources :memberships
   resources :organisations
   resources :gun_lisences

@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181208172456) do
+ActiveRecord::Schema.define(version: 20181208175527) do
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.date "start_date"
+    t.date "end_date"
+    t.integer "tier"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "gun_lisences", force: :cascade do |t|
     t.string "classification"
